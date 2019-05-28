@@ -164,10 +164,14 @@ var module = (function() {
   // Anything that is being returned is made public and can be invoked from
   // outside our lexical scope
   return {
-    // Code here.
+    
+    publicMethod:function(){
+      return privateMethod()
+    }
   };
 })();
 
+module.publicMethod()
 
 
 ////////// PROBLEM 7 //////////
@@ -183,7 +187,12 @@ function secretNumber() {
   var secret = 143;
 
   return {
-    // Code here
+    addToSecret: function(num){
+      return secret += num
+    },
+    takeAwayFromSecret: function(num){
+      return secret -= num
+    }
   };
 }
 
