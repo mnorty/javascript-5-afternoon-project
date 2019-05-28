@@ -16,6 +16,11 @@
 
 // Code here
 
+function CarFactory(make,model) {
+  this.make = make
+  this.model = model
+}
+
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
