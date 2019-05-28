@@ -91,19 +91,32 @@ function makeCounter(){
   http://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example?answertab=votes#tab-top
 */
 
-function counterFactory(value) {
-  // Code here.
+function counterFactory(num) {
+  let total = num
 
-  return {
+  let inc = function(){
+    return ++total
+  }
+  let dec = function(){
+    return --total
+  }
+
+  return  {
+    inc: function(){
+      return inc()
+    },
+    dec: function(){
+      return dec()
+    }
 
   };
 }
 
 counter = counterFactory(10);
-// counter.inc() // 11
-// counter.inc() // 12
-// counter.inc() // 13
-// counter.dec() // 12
+counter.inc() // 11
+counter.inc() // 12
+counter.inc() // 13
+counter.dec() // 12
 
 
 
