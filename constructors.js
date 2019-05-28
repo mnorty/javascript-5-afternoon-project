@@ -91,6 +91,10 @@ function Movie(name, genre, rating) {
 }
 
 // Code here
+Movie.prototype.changeRating = function(num){
+  avg = num + this.rating
+  return this.rating = avg/2
+}
 
 ////////// PROBLEM 5 //////////
 
