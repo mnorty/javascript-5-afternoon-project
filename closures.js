@@ -24,11 +24,11 @@ function outer() {
   
 // Code Here
 
-
+inner = outer()
 
 //Once you do that, invoke inner.
 
-//Code Here
+inner()
 
 
 
@@ -53,7 +53,8 @@ function callFriend(name) {
 
 //Code Here
 
-
+let callJake = callFriend('Jake');
+callJake('435-555-9248')
 
 ////////// PROBLEM 3 //////////
 
@@ -63,7 +64,12 @@ function callFriend(name) {
 
 //Code Here
 
-
+function makeCounter(){
+  let total = 0
+  return function inner(){
+    return ++total
+  }
+}
 
 //Uncomment this once you make your function
 //   var count = makeCounter();
