@@ -123,6 +123,11 @@ User.prototype.addSavedPost = function(id,title,rating){
 
 // Code here
 
+User.prototype.removeSavedPost = function(num){
+  let post = this.savedPosts.indexOf(num)
+  return this.savedPosts = this.savedPosts.splice(--post,1)
+}
+
 ////////// PROBLEM 7 //////////
 
 // You will continue to use the constructor function you created in problem 5.
