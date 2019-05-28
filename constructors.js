@@ -104,6 +104,18 @@ Movie.prototype.changeRating = function(num){
 
 // Code here
 
+function User(name,age,email,savedPosts) {
+  this.name = name;
+  this.age = age;
+  this.email = email;
+  this.savedPosts = savedPosts
+}
+
+User.prototype.addSavedPost = function(id,title,rating){
+  let newPost = {id,title,rating}
+  return this.savedPosts.push(newPost)
+}
+
 ////////// PROBLEM 6 //////////
 
 // You will be using the constructor function you just created in problem 5.
